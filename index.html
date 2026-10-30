@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Station Navigation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        h1, h2, h3 { color: #4da6ff; }
+        a { color: #80bfff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        nav { margin: 15px 0; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: left; }
+        th { background-color: #1e1e1e; }
+        .facility-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        select, button {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+        button {
+            background-color: #0066cc;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Railway Station Navigation System</h1>
+        <p>Your simple guide to finding station facilities and navigating platforms efficiently.</p>
+    </header>
+
+    <hr>
+
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#platforms">Platforms</a> |
+        <a href="#facilities">Facilities</a>
+    </nav>
+
+    <hr>
+
+    <section id="home">
+        <h2>Find Station Locations</h2>
+        <p>Select a facility below to instantly locate it within the station premises:</p>
+
+        <form action="#facilities" method="get">
+            <label for="location">Choose a facility:</label>
+            <select id="location" name="location">
+                <option value="ticket-counter">Ticket Counter</option>
+                <option value="platform">Platform</option>
+                <option value="restroom">Restroom</option>
+                <option value="food-court">Food Court</option>
+            </select>
+            <button type="submit">Find Location</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="platforms">
+        <h2>Platform Information</h2>
+        
+        <table>
+            <tr>
+                <th>Platform Number</th>
+                <th>Status & Directions</th>
+            </tr>
+            <tr>
+                <td>Platform 1</td>
+                <td>Main Concourse level - Express & Interstate Trains</td>
+            </tr>
+            <tr>
+                <td>Platform 2</td>
+                <td>North Wing - Local Suburban Trains</td>
+            </tr>
+            <tr>
+                <td>Platform 3</td>
+                <td>South Wing - Long Distance Trains</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="facilities">
+        <h2>Station Facilities Overview</h2>
+
+        <div class="facility-card">
+            <h3>Ticket Counter & Enquiry</h3>
+            <p>Located near the main entrance terminal. Automated ticket vending machines are available adjacent to the main counters.</p>
+        </div>
+
+        <div class="facility-card">
+            <h3>Food Court & Refreshments</h3>
+            <img src="images/food.jpg" alt="Food Court" style="width: 200px; height: 130px; border-radius: 6px;">
+            <p>Find food stalls, dining outlets, and water stations on Platform 1 and the Central Concourse floor.</p>
+        </div>
+
+        <div class="facility-card">
+            <h3>Restrooms</h3>
+            <img src="images/restroom.jpg" alt="Restroom" style="width: 200px; height: 130px; border-radius: 6px;">
+            <p>Clean, accessible restrooms are located near Platform 2.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Railway Station Navigation System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
